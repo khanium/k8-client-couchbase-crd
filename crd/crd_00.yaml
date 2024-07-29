@@ -26,7 +26,7 @@ spec:
     name: v2
     schema:
       openAPIV3Schema:
-        description: CouchbaseAutoscaler provides an interface for the Kubernetes Horizontal Pod Autoscaler to interact with the Couchbase cluster and provide autoscaling.  This resource is not defined by the end user, and is managed by the Operator.
+        description: 'CouchbaseAutoscaler provides an interface for the Kubernetes Horizontal Pod Autoscaler to interact with the Couchbase cluster and provide autoscaling.  This resource is not defined by the end user, and is managed by the Operator.'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -37,14 +37,14 @@ spec:
           metadata:
             type: object
           spec:
-            description: CouchbaseAutoscalerSpec allows control over an autoscaling group.
+            description: 'CouchbaseAutoscalerSpec allows control over an autoscaling group.'
             properties:
               servers:
-                description: Servers specifies the server group that this autoscaler belongs to.
+                description: 'Servers specifies the server group that this autoscaler belongs to.'
                 minLength: 1
                 type: string
               size:
-                description: Size allows the server group to be dynamically scaled.
+                description: 'Size allows the server group to be dynamically scaled.'
                 minimum: 0
                 type: integer
             required:
@@ -52,14 +52,13 @@ spec:
             - size
             type: object
           status:
-            description: CouchbaseAutoscalerStatus provides information to the HPA to assist with scaling server groups.
+            description: 'CouchbaseAutoscalerStatus provides information to the HPA to assist with scaling server groups.'
             properties:
               labelSelector:
-                description: LabelSelector allows the HPA to select resources to monitor
-                  for resource utilization in order to trigger scaling.
+                description: 'LabelSelector allows the HPA to select resources to monitor for resource utilization in order to trigger scaling.'
                 type: string
               size:
-                description: Size is the current size of the server group.
+                description: 'Size is the current size of the server group.'
                 minimum: 1
                 type: integer
             required:
