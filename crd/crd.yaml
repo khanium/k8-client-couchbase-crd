@@ -26,30 +26,21 @@ spec:
     name: v2
     schema:
       openAPIV3Schema:
-        description: CouchbaseAutoscaler provides an interface for the Kubernetes
-          Horizontal Pod Autoscaler to interact with the Couchbase cluster and provide
-          autoscaling.  This resource is not defined by the end user, and is managed
-          by the Operator.
+        description: CouchbaseAutoscaler provides an interface for the Kubernetes Horizontal Pod Autoscaler to interact with the Couchbase cluster and provide autoscaling.  This resource is not defined by the end user, and is managed by the Operator.
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation
-              of an object. Servers should convert recognized schemas to the latest
-              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this
-              object represents. Servers may infer this from the endpoint the client
-              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
             type: string
           metadata:
             type: object
           spec:
-            description: CouchbaseAutoscalerSpec allows control over an autoscaling
-              group.
+            description: CouchbaseAutoscalerSpec allows control over an autoscaling group.
             properties:
               servers:
-                description: Servers specifies the server group that this autoscaler
-                  belongs to.
+                description: Servers specifies the server group that this autoscaler belongs to.
                 minLength: 1
                 type: string
               size:
@@ -61,8 +52,7 @@ spec:
             - size
             type: object
           status:
-            description: CouchbaseAutoscalerStatus provides information to the HPA
-              to assist with scaling server groups.
+            description: CouchbaseAutoscalerStatus provides information to the HPA to assist with scaling server groups.
             properties:
               labelSelector:
                 description: LabelSelector allows the HPA to select resources to monitor
@@ -128,8 +118,7 @@ spec:
     name: v2
     schema:
       openAPIV3Schema:
-        description: CouchbaseBackupRestore allows the restoration of all Couchbase
-          cluster data from a CouchbaseBackup resource.
+        description: CouchbaseBackupRestore allows the restoration of all Couchbase cluster data from a CouchbaseBackup resource.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -8531,9 +8520,7 @@ spec:
                   in a bucket.
                 type: boolean
               name:
-                description: Name specifies the name of the scope.  By default, the
-                  metadata.name is used to define the scope name, however, due to
-                  the limited character set, this field can be used to override the
+                description: Name specifies the name of the scope.  By default, the metadata.name is used to define the scope name, however, due to the limited character set, this field can be used to override the
                   default and provide the full functionality. Additionally the `metadata.name`
                   field is a DNS label, and thus limited to 63 characters, this field
                   must be used if the name is longer than this limit. Scope names
@@ -8570,14 +8557,10 @@ spec:
         description: CouchbaseUser allows the automation of Couchbase user management.
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation
-              of an object. Servers should convert recognized schemas to the latest
-              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this
-              object represents. Servers may infer this from the endpoint the client
-              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
             type: string
           metadata:
             type: object
